@@ -1,9 +1,8 @@
-- name: Hello World Sample
+- name: get dsik status
   hosts: all
   gather_facts: True
-  
   tasks:
     - name: get disk total
       shell: df --total -h|grep total |awk '{print $2}'
       register: disk_total
-    - debug: msg="{{disk_total}}"
+      debug: "msg={{disk_total}}"
