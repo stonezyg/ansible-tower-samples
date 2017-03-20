@@ -1,7 +1,7 @@
 - name: get dsik status
   hosts: all
   tasks:
-    - name: get disk usage
+    - name: disk usage
       shell: df --total -h|grep total |awk '{print $2}'
       register: disk_total
       debug: "msg={{disk_total}}"
