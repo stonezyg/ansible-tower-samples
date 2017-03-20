@@ -4,7 +4,7 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-- name: get disk total
-  shell: df --total -h|grep total |awk '{print $2}'
-  register: disk_total
-- debug: msg="{{disk_total}}"
+    - name: get disk total
+      shell: df --total -h|grep total |awk '{print $2}'
+      register: disk_total
+      debug: msg="{{disk_total}}"
