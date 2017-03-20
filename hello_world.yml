@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: get disk total
+    - name: get disk total
       shell: df --total -h|grep total |awk '{print $2}'
       register: disk_total
       debug: 
