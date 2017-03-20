@@ -1,0 +1,8 @@
+- name: other config
+  hosts: all
+  remote_user: root
+  gather_facts: False
+
+  tasks:
+    - name: firewalld stop
+      shell: systemctl stop firewalld
